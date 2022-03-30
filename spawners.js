@@ -1,7 +1,7 @@
 var spawns = Matter.Composite.create(),
     spawners = new Array()
 
-setTimeout(function(){Matter.Composite.add(engine.world, spawns)}, 1)
+setTimeout(function(){Matter.Composite.add(engine.world, spawns)}, 10)
 
 
 class Spawner {
