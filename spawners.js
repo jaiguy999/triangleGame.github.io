@@ -19,6 +19,9 @@ class Spawner {
             let newSpawn = Matter.Bodies.circle(this.pos.x, this.pos.y, 50, {
                 friction:0,
                 density:0.01,
+                render:{
+                    fillStyle:"#000"
+                }
             })
 
             newSpawn.halfLife = this.halfLife
