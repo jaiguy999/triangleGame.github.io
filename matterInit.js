@@ -99,7 +99,7 @@ Matter.Events.on(render, "beforeRender", function() {
     render.context.save()
     hero = entitys[0].body.position
 
-    let center = v(-render.canvas.width/4, -render.canvas.width/4)
+    let center = v(-render.canvas.width/4, -render.canvas.height/4)
 
     let targetPos = v(0,0),
         scale = 1
