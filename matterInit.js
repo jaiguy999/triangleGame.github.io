@@ -94,6 +94,8 @@ Matter.Events.on(runner, "beforeUpdate", function () {
 });
 var camera = v(0,0)
 Matter.Events.on(render, "beforeRender", function() {
+    render.canvas.width = window.innerWidth
+    render.canvas.height = window.innerHeight
     render.context.save()
     hero = entitys[0].body.position
 
@@ -162,6 +164,13 @@ Matter.Events.on(render, "afterRender", function() {
     if (startTime < 0) {
         time = -startTime
     }
+  
+    Levels.texts.forEach(text => {
+        render.context.fillStyle = "#000"
+        render.context.strokeStyle = "#000"
+        render.context.fillText(text.text,  text.x, text.y)
+        render.context.strokeText(text.text,  text.x, text.y)
+    });
     
 
     //render.context.fillText(`you get ${time}`,  camera.x-(window.innerWidth/4)+20, camera.y-(window.innerHeight/4)+20)
