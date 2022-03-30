@@ -94,12 +94,12 @@ Matter.Events.on(runner, "beforeUpdate", function () {
 });
 var camera = v(0,0)
 Matter.Events.on(render, "beforeRender", function() {
-    render.canvas.width = window.innerWidth
-    render.canvas.height = window.innerHeight
+    render.canvas.width = Matter.Common.clamp(window.innerWidth, 0, 1440)
+    render.canvas.height = Matter.Common.clamp(window.innerHeight, 0, 789)
     render.context.save()
     hero = entitys[0].body.position
 
-    let center = v(-window.innerWidth/4, -window.innerHeight/4)
+    let center = v(-render.canvas.width/4, -render.canvas.width/4)
 
     let targetPos = v(0,0),
         scale = 1
