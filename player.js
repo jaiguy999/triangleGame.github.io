@@ -1,4 +1,4 @@
-var homework = false
+var num = false
 
 class Entity {
     constructor(pos, scale) {
@@ -143,7 +143,7 @@ class Player extends Entity {
             }
             Matter.Body.setAngularVelocity(this.body, this.body.angularVelocity-speed)
         }
-        if (testKey(this.keyset["jump"], keys) && !testKey(this.keyset["jump"], preKeys) && (this.jumpTime > 0 || homework)) {
+        if (testKey(this.keyset["jump"], keys) && !testKey(this.keyset["jump"], preKeys) && (this.jumpTime > 0 || num)) {
             Matter.Body.setVelocity(this.body, v(this.body.velocity.x,-jump))
             Matter.Body.translate(this.body, v(0,-5))
             this.jumpTime = 0
