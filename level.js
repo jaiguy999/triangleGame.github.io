@@ -2,7 +2,7 @@ var spawnPos = v(100,100)
 
 var fakeGround = Matter.Bodies.rectangle(2910, -3190, 300, 20, {
     render:{
-        fillStyle:"#EE964B",
+        fillStyle:colorTheme.platforms,
     },
     friction:0.05,
 })
